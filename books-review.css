@@ -1,0 +1,194 @@
+
+html{
+    background: linear-gradient(#d5a4ff,#e7d0fb,#f6ebff) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+  
+}
+.header{
+    text-align: center;
+    font-size: 2rem;
+}
+.book-details-card{
+    margin-top: 5rem;
+    margin-left: 25rem;
+    width: 30rem;
+    background-color:#b25afd ;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.books-table{
+    margin-top: 8rem;
+    margin-left: 8rem;
+}
+table,th,td{
+    background-color: #b25afd;
+    width: 70rem;
+    height: 5rem;
+    text-align: center;
+    
+}
+.book-name{
+    margin-left: 12rem;
+    margin-top: 3rem;
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    border: none;
+}
+.book-review{
+
+    margin: 3rem 0 3rem 0 ;
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+    border-color: #7d01eb;
+    text-align: center;
+}
+.add-book-btn{
+    margin-left: 12rem;
+    border: 0.3rem solid #7d01eb;
+    background-color: transparent;
+    border-radius: 5rem;
+    color: beige;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+.add-book-btn:hover{
+    background-color: #7d01eb;
+}
+.rate-container{
+    margin-top: 2rem;
+    margin-left: 25rem;
+    width: 30rem;
+    height: 3rem;
+    background-color: #b25afd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.rate-container .stars-rate input{
+    display: none;
+}
+.stars-rate label{
+    font-size: 1.5rem;
+    color: #444;
+    padding: 0.5rem;
+    float: right;
+    transition: all 0.2s ease;
+}
+.stars-rate input:not(:checked) ~ label:hover,
+.stars-rate input:not(:checked) ~ label:hover ~ label{
+    color: #fd4;
+}
+
+input:checked ~ label{
+    color: #fd4;
+}
+.pop-up .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 10rem;
+    height: 10px;
+    display: none;
+    z-index: 1;
+
+}
+.pop-up .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    color: white;
+    background: #d6b7f1;
+    border-radius: 2rem;
+    width: 450px;
+    height: 250px;
+    text-align: center;
+    z-index: 2;
+}
+.pop-up .close-btn{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.pop-up:active .overlay{
+    display: block;
+}
+.pop-up.active .content{
+    transition: all ease-in-out;
+    display: block;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+@media(max-width:1270px){
+    table,th,td{
+        width: 60rem;
+        height: 5rem;
+}
+
+}
+@media(max-width:1140px){
+    .book-details-card,
+    .rate-container{
+        margin-left: 20rem;
+    }
+    table,th,td{
+        width: 50rem;
+        height: 5rem;
+}
+
+}
+@media(max-width:930px){
+    .book-details-card,
+    .rate-container{
+        margin-left: 12rem;
+    }
+    table,th,td{
+        width: 40rem;
+        height: 5rem;
+}
+}
+
+
+@media(max-width:790px){
+    .book-details-card,
+    .rate-container{
+        margin-left: 8rem;
+    }
+   
+}
+
+@media(max-width:720px){
+    .book-details-card,
+    .rate-container{
+        margin-left: 8rem;
+    }
+    table,th,td{
+        width: 30rem;
+        height: 5rem;
+}
+   
+}
+@media(max-width:620px){
+    .book-details-card,
+    .rate-container,
+    .books-table,table,th,td{
+        margin-left: 3rem;
+    }
+    table,th,td{
+        width: 25rem;
+        height: 5rem;
+    }
+}
+

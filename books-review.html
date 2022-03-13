@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="books-review.css">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/images/favicon/icon.svg" type="image/svg+xml">
+    <title>Book Reviews</title>
+    <link rel="shortcut icon" href="page-icon.png">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+</head>
+<body>
+    <div class="header">
+        <i class="fa fa-bookmark"></i>
+        <q id="quote"></q>
+        <abbr title='' id="author"></abbr>
+    </div>
+    
+    
+    <div class="book-details-card">
+        <form id="books-form">  
+            
+            <input type="text" id="book-name" class="book-name" placeholder="Book Name">
+    
+       
+            <textarea cols="50" rows="15" id="book-review" class="book-review"placeholder="Your Review"></textarea>
+    
+       
+            <button type="submit"  onclick="addBook()" id="add-book-btn" class="add-book-btn">Add Book</button>
+  
+    
+        </form>
+    </div>
+
+    <div class="rate-container" > 
+        <div class="stars-rate" id= 'stars-rate'>
+    <input type="radio" name="rate" id="rate-5" value="5">
+    <label for="rate-5" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-4" value="4"> 
+    <label for="rate-4" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-3" value="3">
+    <label for="rate-3" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-2" value="2">
+    <label for="rate-2" class="fas fa-star"></label>
+    <input type="radio" name="rate" id="rate-1" value="1">
+    <label for="rate-1" class="fas fa-star"></label>
+</div>
+</div>
+
+        <div class="books-table">
+            <table id="books-table">
+                <tr>
+                <th>Book Name</th>
+                <th>Review</th>
+                <th>Rating (for Read)</th>
+            </tr>
+            <tbody class="table-content"></tbody>
+            
+              </table>
+              
+        </div>
+
+   <div class="pop-up" id="pop-up-1">
+       <div class="overlay" > </div>
+<div class="content">
+    <div class="close-btn" onclick="addBook()">&times;</div>
+    <h1>Error</h1>
+    <h3>All fields must be filled</h3>
+</div>
+       </div>
+    <script src="books-review.js"></script>
+</body>
+
+</html>
